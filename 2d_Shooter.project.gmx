@@ -10,7 +10,7 @@
     <sprite>sprites\spr_room</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background1</background>
+    <background>background\bg_clouds</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -19,7 +19,7 @@
     <object>objects\obj_room</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

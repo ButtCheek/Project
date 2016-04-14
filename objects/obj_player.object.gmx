@@ -31,6 +31,9 @@ phy_fixed_rotation = true;
 
 spd = 2;
 jmp = 5;
+
+in_air = true;
+src_check_in_air();
 </string>
           </argument>
         </arguments>
@@ -68,8 +71,16 @@ if (left_key) {
 }
 
 if (space_key) {
-    phy_position_y -= jmp;
+    src_check_in_air();
+    if(!in_air) {
+        with(obj_player) {
+            in_air = true;      
+            physics_apply_impulse(obj_player.x, obj_player.y, 0, -10);
+        }
+    }
 }
+
+
 </string>
           </argument>
         </arguments>

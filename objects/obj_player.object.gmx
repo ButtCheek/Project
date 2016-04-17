@@ -63,22 +63,20 @@ var right_key = keyboard_check(vk_right);
 var left_key = keyboard_check(vk_left);
 var space_key = keyboard_check_pressed(vk_space);
 
+if (spd &gt;= spdmax){
+    spd = spdmax;
+    }
+
 if (right_key) {
 
     spd += spd + acc;
     phy_position_x += spd;
     sprite_index = spr_player_right;
-    if (spd &gt;= spdmax){
-    spd = spdmax;
-    }
 }
 else if (left_key) {
     spd += spd + acc;
     phy_position_x += -spd;
     sprite_index = spr_player_left;
-    if (spd &gt;= spdmax){
-    spd = spdmax;
-    }
 }
 else {
     spd = 0;
